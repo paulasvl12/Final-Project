@@ -1,0 +1,39 @@
+
+
+body {
+    background-color: #FBF2C0;
+}
+
+ input, div#searchbar, a {
+     margin: auto;
+     width: 50%;
+     font-size: 1rem;
+ }
+
+ .mb-4 {
+     margin: auto;
+     padding: 5%;
+ }
+
+ footer {
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     padding: 2%;
+    background-color: gray;
+ }
+
+ footer > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+ }
+ 
+footer ul li {
+    margin: 0 15%;
+}
+
+footer p {
+    margin: auto;
+    text-align: center;
+}
