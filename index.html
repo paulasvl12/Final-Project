@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Volpe Cafe.</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -23,9 +25,9 @@
             <!-- Logo Text -->
             <span class="text-uppercase font-weight-bold">Volpe Cafe</span>
           </a>
-      
+
           <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-      
+
           <div id="navbarSupportedContent" class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active"><a href="index.html" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
@@ -38,15 +40,52 @@
       </nav>
 
     <div id="searchbar">
-      <form>
         <label for="search" >Look Up Any Recipe!</label>
         <input id="search" > <button onclick="getRecipe(document.getElementById('search').value)">Search </button>
         <div id="output">
         </div>
-        <a href="" id="sourceLink"></a>
-      </form>
+        <a href="" id="sourceLink" target="_blank"></a>
     </div>
-  
+
+    <h2 class="titles"> Our Popular Recipes </h2>
+    <div class="container-fluid">
+        <div class="home-carousel">
+          <div class="cell">
+            <a href="coffeesweets.html"><img src="https://livesimply.me/wp-content/uploads/2016/07/Iced-Matcha-Green-Tea-Latte-Two-Ways-500x375.jpg" alt="" ></a></div>
+          <div class="cell">
+            <a href="coffeesweets.html"><img src="https://spoonacular.com/recipeImages/Almond-Coffee-Cake-with-Kahlua-Liqueur-632115.jpg" alt="" ></a></div>
+          <div class="cell">
+            <a href="coffeesweets.html"><img src="https://spoonacular.com/recipeImages/Baby-Chick-Cupcakes-633229.jpg" alt="" ></a></div>
+          <div class="cell">
+            <a href="coffeesweets.html"><img src="https://spoonacular.com/recipeImages/Cherry-Jello-Poke-Cake-637767.jpg" alt="" ></a></div>
+          <div class="cell">
+            <a href="coffeesweets.html"><img src="https://spoonacular.com/recipeImages/Blueberry-Sweet-Muffins-635547.jpg" alt="" ></a></div>
+          <div class="cell">
+            <a href="coffeesweets.html"><img src="https://spoonacular.com/recipeImages/Blueberry-Pineapple-Salad-635562.jpg" alt="" ></a></div>
+        </div>
+      </div>
+
+    <footer>
+        <ul>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-brands fa-facebook"></i></li>
+        </ul>
+        <p> Copyright 2022</p>
+    </footer>
+    <script>
+      var flkty = new Flickity('.home-carousel', {
+      cellAlign: 'left',
+      wrapAround: true,
+      autoPlay: true,
+      pauseAutoPlayOnHover: false,
+      pageDots: true,
+      prevNextButtons: true,
+			groupCells: true
+    });
+    </script>
+
+
 
   </body>
 </html>
