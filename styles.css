@@ -1,39 +1,78 @@
 
 
-body {
+
+
+body > * {
     background-color: #FBF2C0;
 }
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+img{
+  max-height: 300px;
+  max-width: 100%;
+  height: auto;
+}
+.container-fluid {
+  padding: 0px;
+}
+.cell {
+  width:25%;
+  padding: 5px;
+}
 
- input, div#searchbar, a {
+ input, div#searchbar, a{
+     padding: 2%;
      margin: auto;
      width: 50%;
      font-size: 1rem;
  }
+
+div#output {
+    background-color: #FBF2C0;
+}
 
  .mb-4 {
      margin: auto;
      padding: 5%;
  }
 
+ h1#recipe-heading {
+   text-align: center;
+ }
+
+ section#recipes{
+   display: flex;
+   flex-flow: row wrap;
+   padding: 0 5%;
+   font-family:  'Raleway','Cormorant Garamond', serif;
+ }
+
+ .info-p{
+  text-align: center;
+}
+
  footer {
      position: fixed;
      bottom: 0;
      width: 100%;
      padding: 2%;
-    background-color: gray;
+    background-color: #43281C;
  }
 
  footer > ul {
+    color: white;
     list-style: none;
     display: flex;
     flex-direction: row;
  }
- 
+
 footer ul li {
     margin: 0 15%;
 }
 
 footer p {
+    color: white;
     margin: auto;
     text-align: center;
 }
