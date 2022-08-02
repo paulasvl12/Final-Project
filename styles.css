@@ -2,9 +2,6 @@
 
 
 
-body > * {
-    background-color: #FBF2C0;
-}
 *, *:before, *:after{
   box-sizing: inherit;
 }
@@ -20,16 +17,35 @@ img{
   width:25%;
   padding: 5px;
 }
+.masthead {
+  height: 100vh;
+  min-height: 500px;
+  background-image: url('https://images.pexels.com/photos/3968061/pexels-photo-3968061.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
  input, div#searchbar, a{
-     padding: 2%;
+
      margin: auto;
      width: 50%;
      font-size: 1rem;
+
+ }
+ label, input{
+   display: flex;
+   flex-direction: row;
+  padding: 2%;
+  margin: 10px;
  }
 
-div#output {
-    background-color: #FBF2C0;
+h1, h2, h3, h4, p.coffeesweetsNames{
+  color: #DB5A42;
+  font-family: 'Pacifico', cursive;
+}
+h2.titles {
+  font-weight: bold;
 }
 
  .mb-4 {
@@ -37,7 +53,7 @@ div#output {
      padding: 5%;
  }
 
- h1#recipe-heading {
+ h1#recipe-heading, h4, p#reviewParagraph {
    text-align: center;
  }
 
@@ -52,12 +68,25 @@ div#output {
   text-align: center;
 }
 
+
+a {
+color: white;
+}
+
+
+
+#homepageParagraphs {
+  width: 35%;
+  text-align: center;
+  margin: 0 auto;
+}
+
  footer {
-     position: fixed;
+    margin-top: 3%;
      bottom: 0;
      width: 100%;
      padding: 2%;
-    background-color: #43281C;
+    background-color: #A57F60;
  }
 
  footer > ul {
@@ -71,8 +100,80 @@ footer ul li {
     margin: 0 15%;
 }
 
+ footer ul  li i {
+   min-width: 40px;
+   min-height: 40px;
+ }
+
 footer p {
     color: white;
     margin: auto;
     text-align: center;
 }
+
+/* Reviews page -> Mobile responsiveness CSS
+  For PCs : have multiple revies in one row
+  For phones : have only one review per row */
+  @media only screen and (max-width: 600px) {
+
+    .reviews{
+      width: 25vh;
+    }
+    h2.titles {
+      width: 50vh;
+      position: relative;
+      left: 15%;
+      padding: 5% 0;
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    h2.titles {
+      width: 50vh;
+      position: relative;
+      left: 45%;
+      padding: 3% 0;
+    }
+    .reviews{
+      width: 30%;
+      padding: 10px 5%;
+    }
+    section#reviewsRecipes {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .reviews > label, textarea, button {
+      display: flex;
+      flex-direction: column;
+
+    }
+  }
+  .rating {
+  display: flex;
+  flex-direction: row-reverse;
+  }
+
+  .rating>label {
+    font-size: 25px;
+    color: #ff0000;
+    cursor: pointer;
+  }
+  .rating>label::before {
+  content: "\2605";
+  position: absolute;
+  opacity: 0
+  }
+  .rating>input {
+  display: none
+  }
+  .rating>label:hover:before,
+  .rating>label:hover~label:before {
+  opacity: 1 !important
+  }
+  .rating>input:checked~label:before {
+  opacity: 1
+  }
+  .rating:hover>input:checked~label:before {
+  opacity: 0.4
+  }
