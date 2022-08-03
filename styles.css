@@ -44,8 +44,8 @@ h1, h2, h3, h4, p.coffeesweetsNames{
   color: #DB5A42;
   font-family: 'Pacifico', cursive;
 }
-h2.titles {
-  font-weight: bold;
+h2.titles, h2.titles1, h1#recipe-heading {
+  font-family: 'Archivo Black', sans-serif;
 }
 
  .mb-4 {
@@ -54,6 +54,7 @@ h2.titles {
  }
 
  h1#recipe-heading, h4, p#reviewParagraph {
+   padding: 2% 0;
    text-align: center;
  }
 
@@ -134,9 +135,20 @@ footer p {
       left: 45%;
       padding: 3% 0;
     }
+    h2.titles1 {
+      width: 50vh;
+      position: relative;
+      left: 40%;
+      padding: 3% 0;
+    }
     .reviews{
       width: 30%;
       padding: 10px 5%;
+    }
+    .recipe {
+      display: flex;
+      flex-direction: row;
+      width: 33%;
     }
     section#reviewsRecipes {
       display: flex;
